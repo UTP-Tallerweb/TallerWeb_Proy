@@ -6,6 +6,13 @@
   <title>Register Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../pages/register-estilos.css" />
+  
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
 </head>
 
 <body>
@@ -121,13 +128,30 @@
         const confirmPassword = document.getElementById("register-confirm-password").value;
 
         if (password !== confirmPassword) {
-        alert("Las contraseñas no coinciden.");
+            Swal.fire({
+            title: '¡Error!',
+            text: 'Las contraseñas no coinciden.',
+            imageWidth: 80,
+            imageHeight: 80,
+            imageAlt: 'Robot',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        });
         return;
         }
 
         const userData = { name, email, password };
         localStorage.setItem("user", JSON.stringify(userData));
-        alert("Registro exitoso. Ahora puedes iniciar sesión.");
+            Swal.fire({
+            title: '¡Registro exitoso!',
+            text: 'Ahora puedes iniciar sesión.',
+            imageUrl: 'https://cdn-icons-png.flaticon.com/512/4712/4712035.png', 
+            imageWidth: 80,
+            imageHeight: 80,
+            imageAlt: 'Robot',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        });
         showLogin();
     });
 
@@ -141,7 +165,15 @@
         const savedUser = JSON.parse(localStorage.getItem("user"));
 
         if (!savedUser || savedUser.email !== email || savedUser.password !== password) {
-        alert("Email o contraseña incorrecta.");
+            Swal.fire({
+            title: '¡Error!',
+            text: 'Email o contraseña incorrecta.',
+            imageWidth: 80,
+            imageHeight: 80,
+            imageAlt: 'Robot',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        });
         return;
         }
 
@@ -150,7 +182,16 @@
         document.getElementById("loader").classList.remove("hidden");
 
         setTimeout(() => {
-        alert("Bienvenido, " + savedUser.name);
+            Swal.fire({
+            title: '¡Bienvenido!',
+            text: 'Ahora puedes iniciar sesión.',
+            imageUrl: 'https://cdn-icons-png.flaticon.com/512/4712/4712035.png', 
+            imageWidth: 80,
+            imageHeight: 80,
+            imageAlt: 'Robot',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        });
           window.location.href = "nuestrosProductos.html";
         }, 3000);
     });
