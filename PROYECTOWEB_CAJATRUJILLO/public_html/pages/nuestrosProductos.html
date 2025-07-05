@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,29 @@
     <link rel="stylesheet" href="nuestrosProductos.css">
     <link rel="icon" href="../LOGO/CajaTrujilloICON.ico" type="image/x-icon">
 </head>
+
 <body>
     <header style="display: flex; flex-direction: column; align-items: flex-start;">
-        <a href="../index.html" class="btn-volver">
-            <svg viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-            Volver al inicio
-        </a>
         <h1>Nuestros Productos</h1>
         <p>Descubre las soluciones financieras que Caja Trujillo tiene para ti.</p>
+        <div class="usuario-info">
+            <div class="usuario-avatar" id="avatar-inicial">U</div>
+            <div class="usuario-nombre" id="nombre-usuario">Usuario</div>
+            <button class="btn-salir" id="btn-salir">Salir</button>
+        </div>
     </header>
     <main>
         <section class="productos">
+            <div class="tarjeta-producto" id="tarjeta-crear-cuenta">
+                <img src="../OFRECEMOS/ahorro.png" alt="Cuenta de Ahorro">
+                <h2>Crear cuenta bancaria</h2>
+                <p>Crea tu cuenta de manera segura y sin complicaciones</p>
+            </div>
+            <div class="tarjeta-producto" id="tarjeta-ver-cuentas">
+                <img src="../OFRECEMOS/ahorro.png" alt="Ver Cuentas">
+                <h2>Ver mis cuentas</h2>
+                <p>Consulta todas tus cuentas bancarias registradas.</p>
+            </div>
             <div class="tarjeta-producto">
                 <img src="../OFRECEMOS/ahorro.png" alt="Cuenta de Ahorro">
                 <h2>Cuenta de Ahorro</h2>
@@ -40,5 +53,118 @@
             </div>
         </section>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tarjetaCrearCuenta = document.getElementById('tarjeta-crear-cuenta');
+
+            if (tarjetaCrearCuenta) {
+                tarjetaCrearCuenta.addEventListener('click', () => {
+                    fetch('./modal-cuenta.html')
+                        .then(res => res.text())
+                        .then(html => {
+                            const modalDiv = document.createElement('div');
+                            modalDiv.id = 'modal-externo';
+                            modalDiv.innerHTML = html;
+                            document.body.appendChild(modalDiv);
+
+                            // Cerrar modal al hacer click fuera o en la X
+                            modalDiv.addEventListener('click', function (e) {
+                                if (e.target.id === 'modal-externo' || e.target.classList.contains('cerrar-modal')) {
+                                    modalDiv.remove();
+                                }
+                            });
+
+                            // Esperar al formulario que está dentro del modal cargado
+                            setTimeout(() => {
+                                const form = modalDiv.querySelector('.formulario-cuenta');
+                                if (form) {
+                                    form.addEventListener('submit', function (e) {
+                                        e.preventDefault();
+
+                                        const nuevaCuenta = {
+                                            nombre: form.nombre.value.trim(),
+                                            dni: form.dni.value.trim(),
+                                            correo: form.correo.value.trim(),
+                                            telefono: form.telefono.value.trim()
+                                        };
+
+                                        // Obtener las cuentas existentes
+                                        let cuentas = JSON.parse(localStorage.getItem('cuentas')) || [];
+
+                                        // Agregar nueva cuenta
+                                        cuentas.push(nuevaCuenta);
+
+                                        // Guardar nuevamente
+                                        localStorage.setItem('cuentas', JSON.stringify(cuentas));
+
+                                        alert('Cuenta creada exitosamente');
+                                        modalDiv.remove();
+                                    });
+                                }
+                            }, 50);
+                        });
+                });
+            }
+            const tarjetaVerCuentas = document.getElementById('tarjeta-ver-cuentas');
+
+            if (tarjetaVerCuentas) {
+                tarjetaVerCuentas.addEventListener('click', () => {
+                    fetch('./modal-lista-cuentas.html')
+                        .then(res => res.text())
+                        .then(html => {
+                            const modalDiv = document.createElement('div');
+                            modalDiv.id = 'modal-lista-container';
+                            modalDiv.innerHTML = html;
+                            document.body.appendChild(modalDiv);
+
+                            // Cierre del modal
+                            modalDiv.addEventListener('click', function (e) {
+                                if (e.target.id === 'modal-lista-container' || e.target.classList.contains('cerrar-modal')) {
+                                    modalDiv.remove();
+                                }
+                            });
+
+                            // Mostrar lista de cuentas
+                            const contenedor = modalDiv.querySelector('#lista-cuentas-container');
+                            const cuentas = JSON.parse(localStorage.getItem('cuentas')) || [];
+
+                            if (cuentas.length === 0) {
+                                contenedor.innerHTML = '<p>No hay cuentas registradas.</p>';
+                            } else {
+                                const listaHTML = cuentas.map(cuenta => `
+              <div style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; margin-bottom: 10px;">
+                <strong>Nombre:</strong> ${cuenta.nombre}<br>
+                <strong>DNI:</strong> ${cuenta.dni}<br>
+                <strong>Correo:</strong> ${cuenta.correo}<br>
+                <strong>Teléfono:</strong> ${cuenta.telefono}
+              </div>
+            `).join('');
+
+                                contenedor.innerHTML = listaHTML;
+                            }
+                        });
+                });
+            }
+            const usuario = JSON.parse(localStorage.getItem('user'));
+            const nombreUsuario = document.getElementById('nombre-usuario');
+            const avatar = document.getElementById('avatar-inicial');
+            const btnSalir = document.getElementById('btn-salir');
+
+            if (usuario && usuario.name) {
+                nombreUsuario.textContent = `Bienvenido, ${usuario.name}`;
+                avatar.textContent = usuario.name.charAt(0).toUpperCase();
+            } else {
+                nombreUsuario.textContent = 'Usuario';
+                avatar.textContent = 'U';
+            }
+
+            btnSalir.addEventListener('click', () => {
+                localStorage.clear();
+                window.location.href = 'http://localhost:3000/';
+            });
+        });
+    </script>
+
 </body>
+
 </html>
