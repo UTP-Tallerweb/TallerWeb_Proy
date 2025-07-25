@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caja Trujillo</title>
+  <link rel="stylesheet" href="../Estilos.css" />
+  <link rel="icon" href="../LOGO/CajaTrujilloICON.ico" type="image/x-icon" />
+  <style>
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      flex: 1;
+      background-color: #f2f2f2; /* Color de fondo central */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ofrecemos {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .ofrecemos-contenido {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .ofrecemos-item {
+      width: 200px;
+      text-align: center;
+    }
+
+    .imagen-central {
+      width: 100%;
+      max-width: 250px;
+    }
+
+    .titulo-central {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">Caja Trujillo</h1>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#productos">Ofrecemos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#preguntas">Preguntas Frecuentes</a></li>
+        <li><a href="#formulario">Formulario</a></li>
+        <li><a href="#ubicacion">Ubícanos</a></li>
+        <li><a href="register.html" class="btn-modal nav-btn">Ingresar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="productos" class="section ofrecemos">
+      <h2>Ofrecemos</h2>
+      <div class="ofrecemos-contenido">
+        <div class="columna-izquierda">
+          <div class="ofrecemos-item">
+            <img src="../OFRECEMOS/imagen4.png" alt="Compra de insumos">
+            <p>Compra de insumos para mi empresa</p>
+          </div>
+          <div class="ofrecemos-item">
+            <img src="../OFRECEMOS/imagen2.png" alt="Crédito para compra de material">
+            <p>Crédito para compra de material</p>
+          </div>
+          <div class="ofrecemos-item">
+            <img src="../OFRECEMOS/imagen5.png" alt="Ampliación o compra de local comercial">
+            <p>Ampliación o compra de mi local comercial</p>
+          </div>
+        </div>
+
+        <div class="columna-central">
+          <img src="../OFRECEMOS/imagen9.png" alt="Persona con tarjeta" class="imagen-central">
+          <h3 class="titulo-central">Haz crecer tu negocio con un crédito de Caja Trujillo</h3>
+        </div>
+
+        <div class="columna-derecha">
+          <div class="ofrecemos-item">
+            <img src="../OFRECEMOS/imagen6.png" alt="Compra de equipos">
+            <p>Compra de equipos para mi negocio</p>
+          </div>
+          <div class="ofrecemos-item">
+            <img src="../OFRECEMOS/imagen1.png" alt="Compra de unidades vehiculares">
+            <p>Compra de unidades vehiculares para mi negocio</p>
+          </div>
+          <div class="ofrecemos-item">
+            <img src="../OFRECEMOS/imagen7.png" alt="Compra de inmuebles">
+            <p>Compra de inmuebles para mi negocio</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Caja Trujillo - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
