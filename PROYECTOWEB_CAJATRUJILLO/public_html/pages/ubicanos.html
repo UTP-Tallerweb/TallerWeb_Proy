@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caja Trujillo</title>
+  <link rel="stylesheet" href="../Estilos.css" />
+  <link rel="icon" href="../LOGO/CajaTrujilloICON.ico" type="image/x-icon" />
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .faq-section, section {
+    flex: 1;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">Caja Trujillo</h1>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="ofrecemos.html">Ofrecemos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li><a href="ubicanos.html">Ubícanos</a></li>
+        <li><a href="register.html" class="btn-modal nav-btn">Ingresar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+        <section id="ubicacion" class="section">
+            <h2>Ubícanos</h2>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.89689649884!2d-77.02675399899788!3d-12.057704359572895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8bc7a8443d3%3A0x9a56d9d268ac3ee1!2sCAJA%20TRUJILLO!5e0!3m2!1ses-419!2spe!4v1748582106575!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+  <footer>
+    <p>&copy; 2025 Caja Trujillo - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
