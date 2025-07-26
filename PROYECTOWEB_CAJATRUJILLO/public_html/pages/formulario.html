@@ -6,6 +6,8 @@
   <title>Caja Trujillo</title>
   <link rel="stylesheet" href="../Estilos.css" />
   <link rel="icon" href="../LOGO/CajaTrujilloICON.ico" type="image/x-icon" />
+  <!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
     body {
       margin: 0;
@@ -191,7 +193,11 @@
   <script>
     document.querySelector('.formulario').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert("¡Consulta enviada correctamente!");
+      Swal.fire({
+  title: "¡Solicitud enviada!!",
+  icon: "success",
+  draggable: true
+});
       this.reset();
     });
   </script>
