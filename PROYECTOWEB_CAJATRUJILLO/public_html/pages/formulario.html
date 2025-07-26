@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caja Trujillo</title>
+  <link rel="stylesheet" href="../Estilos.css" />
+  <link rel="icon" href="../LOGO/CajaTrujilloICON.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-icon span {
+      background: white;
+      height: 3px;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li {
+      margin: 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .section {
+      flex: 1;
+      padding: 40px 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .formulario {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .formulario input,
+    .formulario textarea {
+      padding: 10px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .formulario button {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #1e3a8a;
+      }
+
+      .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">Caja Trujillo</h1>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="ofrecemos.html">Ofrecemos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li><a href="ubicanos.html">Ubícanos</a></li>
+        <li><a href="register.html" class="btn-modal nav-btn">Ingresar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FORMULARIO -->
+  <section id="formulario" class="section">
+    <h2>Formulario de Consulta</h2>
+    <form class="formulario">
+      <label>
+        Nombre completo:
+        <input type="text" name="nombre" required>
+      </label>
+      <label>
+        Correo electrónico:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Número de teléfono:
+        <input type="tel" name="telefono" required>
+      </label>
+ <label>
+        Tipo de consulta:
+        <select name="tipo" required>
+          <option value="">Seleccione una opción</option>
+          <option value="créditos">Créditos</option>
+          <option value="ahorros">Ahorros</option>
+          <option value="servicios">Servicios</option>
+          <option value="otro">Otro</option>
+        </select>
+      </label>
+      <label>
+        Mensaje:
+        <textarea name="mensaje" rows="4" required></textarea>
+      </label>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- SCRIPT ALERTA -->
+  <script>
+    document.querySelector('.formulario').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("¡Consulta enviada correctamente!");
+      this.reset();
+    });
+  </script>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Caja Trujillo - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

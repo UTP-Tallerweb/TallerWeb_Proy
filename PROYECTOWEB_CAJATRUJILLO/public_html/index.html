@@ -1,259 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caja Trujillo</title>
-    <link rel="stylesheet" href="estilos.css">
-<link rel="icon" href="LOGO/CajaTrujilloICON.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caja Trujillo</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="icon" href="LOGO/CajaTrujilloICON.ico" type="image/x-icon" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    main {
+      flex: 1;
+    }
+
+  </style>
 </head>
 <body>
 
-    <header class="hero">
-        <nav class="navbar">
-            <h1 class="logo">Caja Trujillo</h1>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-            <label for="menu-toggle" class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="pages/Nosotros.html">Nosotros</a></li>
-                <li><a href="pages/ofrecemos.html">Ofrecemos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#preguntas">Preguntas Frecuentes</a></li>
-                <li><a href="#formulario">Formulario</a></li>
-                <li><a href="#ubicacion">Ubícanos</a></li>
-                <li>
-                <a href="pages/register.html" class="btn-modal nav-btn">Ingresar</a>
-                </li>            
-            </ul>
-        </nav>
-    </header>
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">Caja Trujillo</h1>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="pages/Nosotros.html">Nosotros</a></li>
+        <li><a href="pages/ofrecemos.html">Ofrecemos</a></li>
+        <li><a href="pages/contacto.html">Contacto</a></li>
+        <li><a href="pages/preguntas.html">Preguntas Frecuentes</a></li>
+        <li><a href="pages/formulario.html">Formulario</a></li>
+        <li><a href="pages/ubicanos.html">Ubícanos</a></li>
+        <li>
+          <a href="pages/register.html" class="btn-modal nav-btn">Ingresar</a>
+        </li>            
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-
+  <main>
 <section id="nosotros" class="section">
-    <div class="carrusel-con-texto">
-        
-        <div class="carrusel-imagenes">
-            <img src="OFRECEMOS/inicio (1).jpg" alt="Imagen 1" class="carrusel-img active">
-            <img src="OFRECEMOS/inicio2 (1).jpg" alt="Imagen 2" class="carrusel-img">
-            <img src="OFRECEMOS/inicio3 (1).jpg" alt="Imagen 3" class="carrusel-img">
-            <img src="OFRECEMOS/inicio4 (1).jpg" alt="Imagen 3" class="carrusel-img">
-        </div>
-        <div class="texto-sobre-imagen">
-            <h2>¡Impulsa tu futuro con Caja Trujillo!</h2>
-            <p>Confianza, solidez y apoyo para tu crecimiento.</p>
-        </div>
+  <div class="carrusel-con-texto">
+    <div class="carrusel-imagenes">
+      <img src="OFRECEMOS/inicio (1).jpg" alt="Imagen 1" class="carrusel-img active">
+      <img src="OFRECEMOS/inicio2 (1).jpg" alt="Imagen 2" class="carrusel-img">
+      <img src="OFRECEMOS/inicio3 (1).jpg" alt="Imagen 3" class="carrusel-img">
+      <img src="OFRECEMOS/inicio4 (1).jpg" alt="Imagen 4" class="carrusel-img">
+      <div class="texto-sobre-imagen">
+        <h2>¡Impulsa tu futuro con Caja Trujillo!</h2>
+        <p>Confianza, solidez y apoyo para tu crecimiento.</p>
+      </div>
     </div>
- 
-
-
-
-<!-- SECCION CONTACTO -->
-<section id="contacto" class="section">
-    <h2>Contacto</h2>
-    <p>Comunícate con nosotros a través de los siguientes medios:</p>
-    <p> 
-        📞 Teléfono fijo: (044) 123456<br>
-        📱 Celular: 987654321<br>
-        💬 WhatsApp: 987654321<br>
-        🌐 Sitio web: www.cajatrujillo.pe<br>
-        📘 Facebook: facebook.com/CajaTrujilloOficial<br>
-        🐦 Twitter: twitter.com/CajaTrujillo<br>
-        📸 Instagram: instagram.com/CajaTrujillo
-    </p>
+  </div>
 </section>
+  </main>
 
-<!-- SECCION PREGUNTAS FRECUENTES -->
-        <section id="preguntas" class="faq-section">
-            <h2>Preguntas Frecuentes</h2>
-            <div id="faq" class="faq-container">
-                <div class="faq-item">
-                    <input type="checkbox" id="faq1">
-                    <label class="faq-question" for="faq1">
-                        ¿Qué es una Caja Municipal de Ahorro?
-                        <span class="arrow"></span>
-                    </label>
-                    <div class="faq-answer">
-                        Es una entidad financiera que brinda servicios de ahorro, crédito y otros productos financieros con un enfoque local y comunitario.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <input type="checkbox" id="faq2">
-                    <label class="faq-question" for="faq2">
-                        ¿Quiénes pueden abrir una cuenta de ahorros?
-                        <span class="arrow"></span>
-                    </label>
-                    <div class="faq-answer">
-                        Cualquier persona natural o jurídica que cumpla con los requisitos mínimos puede abrir una cuenta de ahorros.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <input type="checkbox" id="faq3">
-                    <label class="faq-question" for="faq3">
-                        ¿Qué documentos necesito para abrir una cuenta?
-                        <span class="arrow"></span>
-                    </label>
-                    <div class="faq-answer">
-                        Debes presentar tu documento de identidad vigente y un recibo de servicio público para validar tu dirección.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <input type="checkbox" id="faq4">
-                    <label class="faq-question" for="faq4">
-                        ¿La Caja ofrece préstamos personales?
-                        <span class="arrow"></span>
-                    </label>
-                    <div class="faq-answer">
-                        Sí, ofrecemos préstamos personales con tasas competitivas y planes flexibles de pago.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <input type="checkbox" id="faq5">
-                    <label class="faq-question" for="faq5">
-                        ¿Puedo realizar operaciones en línea?
-                        <span class="arrow"></span>
-                    </label>
-                    <div class="faq-answer">
-                        Sí, contamos con una plataforma de banca en línea para que puedas hacer consultas y operaciones de manera segura.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <input type="checkbox" id="faq6">
-                    <label class="faq-question" for="faq6">
-                        ¿Cuál es el horario de atención?
-                        <span class="arrow"></span>
-                    </label>
-                    <div class="faq-answer">
-                        Atendemos de lunes a viernes de 9:00 a.m. a 5:00 p.m. y sábados de 9:00 a.m. a 1:00 p.m.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <input type="checkbox" id="faq7">
-                    <label class="faq-question" for="faq7">
-                        ¿Tienen seguros vinculados a los créditos?
-                        <span class="arrow"></span>
-                    </label>
-                    <div class="faq-answer">
-                        Sí, todos nuestros créditos incluyen seguros de desgravamen y otros opcionales según el producto.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <input type="checkbox" id="faq8">
-                    <label class="faq-question" for="faq8">
-                        ¿Qué beneficios tengo al ahorrar en la Caja?
-                        <span class="arrow"></span>
-                    </label>
-                    <div class="faq-answer">
-                        Obtienes intereses sobre tus depósitos, seguridad financiera, y acceso a otros productos como créditos y programas de fidelización.
-                    </div>
-                </div>
-            </div>
-        </section>
+  <footer>
+    <p>&copy; 2025 Caja Trujillo - Todos los derechos reservados.</p>
+  </footer>
 
-        <section id="formulario" class="section">
-            <h2>Formulario de Consulta</h2>
-            <form  class="formulario" 
-            action="https://formspree.io/f/xzzgpava"
-            method="POST"
-            >
-            <label>
-                correo electrónico:
-                <input type="email" name="email" required>
-            </label>
-            <label>
-                mensaje:
-                <textarea name="message" required></textarea>
-            </label>
-            <button type="submit">Enviar</button>
-            </form>
-        </section>
-        <script>
-            document.querySelector('.formulario').addEventListener('submit', async function(e) {
-                e.preventDefault();
-                const form = e.target;
-                const data = new FormData(form);
-
-                const btn = form.querySelector('button[type="submit"]');
-                btn.disabled = true;
-
-                try {
-                    const response = await fetch(form.action, {
-                        method: form.method,
-                        body: data,
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    if (response.ok) {
-                        form.reset();
-                        alert('¡Consulta enviada correctamente!');
-                    } else {
-                        alert('Ocurrió un error al enviar. Intenta nuevamente.');
-                    }
-                } catch (error) {
-                    alert('Ocurrió un error de red. Intenta nuevamente.');
-                }
-                btn.disabled = false;
-            });
-        </script>
-        <section id="ubicacion" class="section">
-            <h2>Ubícanos</h2>
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.89689649884!2d-77.02675399899788!3d-12.057704359572895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8bc7a8443d3%3A0x9a56d9d268ac3ee1!2sCAJA%20TRUJILLO!5e0!3m2!1ses-419!2spe!4v1748582106575!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Caja Trujillo - Todos los derechos reservados.</p>
-    </footer>
-<script>
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Carrusel
-        const imagenes = document.querySelectorAll('.carrusel-img');
-        let actual = 0;
-        setInterval(() => {
-            imagenes[actual].classList.remove('active');
-            actual = (actual + 1) % imagenes.length;
-            imagenes[actual].classList.add('active');
-        }, 3500);
+      const imagenes = document.querySelectorAll('.carrusel-img');
+      let actual = 0;
+      setInterval(() => {
+        imagenes[actual].classList.remove('active');
+        actual = (actual + 1) % imagenes.length;
+        imagenes[actual].classList.add('active');
+      }, 3500);
 
-        // Botones para abrir modales
-        const botones = [
-            { id: 'abrir-modal', archivo: './pages/modal-cuenta.html' },
-        ];
+      const botones = [
+        { id: 'abrir-modal', archivo: './pages/modal-cuenta.html' },
+      ];
 
-        botones.forEach(({ id, archivo }) => {
-            const btn = document.getElementById(id);
-            if (btn) {
-                btn.addEventListener('click', () => {
-                    // Cierra menú móvil si está abierto
-                    const menuToggle = document.getElementById('menu-toggle');
-                    if (menuToggle && menuToggle.checked) {
-                        menuToggle.checked = false;
-                    }
-
-                    fetch(archivo)
-                        .then(res => res.text())
-                        .then(html => {
-                            const modalDiv = document.createElement('div');
-                            modalDiv.id = 'modal-externo';
-                            modalDiv.innerHTML = html;
-                            document.body.appendChild(modalDiv);
-
-                            modalDiv.addEventListener('click', function (e) {
-                                if (e.target.id === 'modal-externo' || e.target.classList.contains('cerrar-modal')) {
-                                    modalDiv.remove();
-                                }
-                            });
-                        });
-                });
+      botones.forEach(({ id, archivo }) => {
+        const btn = document.getElementById(id);
+        if (btn) {
+          btn.addEventListener('click', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            if (menuToggle && menuToggle.checked) {
+              menuToggle.checked = false;
             }
-        });
+
+            fetch(archivo)
+              .then(res => res.text())
+              .then(html => {
+                const modalDiv = document.createElement('div');
+                modalDiv.id = 'modal-externo';
+                modalDiv.innerHTML = html;
+                document.body.appendChild(modalDiv);
+
+                modalDiv.addEventListener('click', function (e) {
+                  if (e.target.id === 'modal-externo' || e.target.classList.contains('cerrar-modal')) {
+                    modalDiv.remove();
+                  }
+                });
+              });
+          });
+        }
+      });
     });
-</script>
+  </script>
 
 </body>
 </html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caja Trujillo</title>
+  <link rel="stylesheet" href="../Estilos.css" />
+  <link rel="icon" href="../LOGO/CajaTrujilloICON.ico" type="image/x-icon" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background-color: #c62828;
+      padding: 20px;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .faq-section {
+      flex: 1;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .faq-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+    }
+
+    .faq-question {
+      display: block;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .faq-answer {
+      padding: 10px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-top: none;
+      display: none;
+    }
+
+    .faq-item input[type="checkbox"]:checked + .faq-question + .faq-answer {
+      display: block;
+    }
+
+
+    .logo {
+      font-size: 1.5rem;
+    }
+
+    .menu-toggle, .menu-icon {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">Caja Trujillo</h1>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="ofrecemos.html">Ofrecemos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li><a href="ubicanos.html">Ubícanos</a></li>
+        <li><a href="register.html" class="btn-modal nav-btn">Ingresar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN PREGUNTAS FRECUENTES -->
+  <section id="preguntas" class="faq-section">
+    <h2>Preguntas Frecuentes</h2>
+    <div id="faq" class="faq-container">
+      <div class="faq-item">
+        <input type="checkbox" id="faq1">
+        <label class="faq-question" for="faq1">
+          ¿Qué es una Caja Municipal de Ahorro?
+          <span class="arrow"></span>
+        </label>
+        <div class="faq-answer">
+          Es una entidad financiera que brinda servicios de ahorro, crédito y otros productos financieros con un enfoque local y comunitario.
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq2">
+        <label class="faq-question" for="faq2">
+          ¿Quiénes pueden abrir una cuenta de ahorros?
+          <span class="arrow"></span>
+        </label>
+        <div class="faq-answer">
+          Cualquier persona natural o jurídica que cumpla con los requisitos mínimos puede abrir una cuenta de ahorros.
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq3">
+        <label class="faq-question" for="faq3">
+          ¿Qué documentos necesito para abrir una cuenta?
+          <span class="arrow"></span>
+        </label>
+        <div class="faq-answer">
+          Debes presentar tu documento de identidad vigente y un recibo de servicio público para validar tu dirección.
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq4">
+        <label class="faq-question" for="faq4">
+          ¿La Caja ofrece préstamos personales?
+          <span class="arrow"></span>
+        </label>
+        <div class="faq-answer">
+          Sí, ofrecemos préstamos personales con tasas competitivas y planes flexibles de pago.
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq5">
+        <label class="faq-question" for="faq5">
+          ¿Puedo realizar operaciones en línea?
+          <span class="arrow"></span>
+        </label>
+        <div class="faq-answer">
+          Sí, contamos con una plataforma de banca en línea para que puedas hacer consultas y operaciones de manera segura.
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq6">
+        <label class="faq-question" for="faq6">
+          ¿Cuál es el horario de atención?
+          <span class="arrow"></span>
+        </label>
+        <div class="faq-answer">
+          Atendemos de lunes a viernes de 9:00 a.m. a 5:00 p.m. y sábados de 9:00 a.m. a 1:00 p.m.
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq7">
+        <label class="faq-question" for="faq7">
+          ¿Tienen seguros vinculados a los créditos?
+          <span class="arrow"></span>
+        </label>
+        <div class="faq-answer">
+          Sí, todos nuestros créditos incluyen seguros de desgravamen y otros opcionales según el producto.
+        </div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq8">
+        <label class="faq-question" for="faq8">
+          ¿Qué beneficios tengo al ahorrar en la Caja?
+          <span class="arrow"></span>
+        </label>
+        <div class="faq-answer">
+          Obtienes intereses sobre tus depósitos, seguridad financiera, y acceso a otros productos como créditos y programas de fidelización.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Caja Trujillo - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

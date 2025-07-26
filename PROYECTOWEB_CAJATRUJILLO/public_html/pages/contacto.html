@@ -4,51 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Caja Trujillo</title>
-  <link rel="stylesheet" href="../Estilos.css" />
+  <link rel="stylesheet" href="../estilos.css" />
   <link rel="icon" href="../LOGO/CajaTrujilloICON.ico" type="image/x-icon" />
   <style>
-    /* Estilo específico para esta página */
-    .nosotros-section {
+    /* Estilo para forzar el footer abajo */
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+    .section {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 60px 20px;
       text-align: center;
+      background-color: #f8f9fa;
+      padding: 40px 20px;
     }
 
-    .nosotros-section h2 {
-      font-size: 2rem;
-      color: #002b5c;
-      margin-bottom: 30px;
+    h2 {
+      margin-bottom: 10px;
     }
 
-    .nosotros-section video {
-      max-width: 90%;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .nosotros-section p {
-      max-width: 800px;
-      font-size: 1.1rem;
+    p {
+      max-width: 600px;
       line-height: 1.6;
-    }
-
-    html, body {
-      height: 100%;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
+      
+      
     }
   </style>
 </head>
@@ -76,19 +64,20 @@
     </nav>
   </header>
 
-  <main>
-    <section id="nosotros" class="section nosotros-section">
-      <h2>Nosotros</h2>
-
-      <video width="768" height="432" autoplay muted loop controls>
-        <source src="../VIDEOS/VIDEOINICIO.mp4" type="video/mp4" />
-      </video>
-
-      <p>
-        Somos una institución financiera sólida y confiable que apoya el crecimiento económico de los peruanos a través de productos de ahorro y crédito. Con años de experiencia y compromiso con nuestra comunidad, buscamos brindar soluciones personalizadas para cada cliente.
-      </p>
-    </section>
-  </main>
+  <!-- SECCIÓN CONTACTO -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>Comunícate con nosotros a través de los siguientes medios:</p>
+    <p>
+      📞 Teléfono fijo: (044) 123456<br>
+      📱 Celular: 987654321<br>
+      💬 WhatsApp: 987654321<br>
+      🌐 Sitio web: www.cajatrujillo.pe<br>
+      📘 Facebook: facebook.com/CajaTrujilloOficial<br>
+      🐦 Twitter: twitter.com/CajaTrujillo<br>
+      📸 Instagram: instagram.com/CajaTrujillo
+    </p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Caja Trujillo - Todos los derechos reservados.</p>
